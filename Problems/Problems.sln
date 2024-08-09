@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{6DA552DD-F588-460C-9B02-FA8BA8796FFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrome", "Palindrome\Palindrome.csproj", "{67C0A509-F1BA-4EFE-AC03-9B0D623DF9BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DA552DD-F588-460C-9B02-FA8BA8796FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA552DD-F588-460C-9B02-FA8BA8796FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA552DD-F588-460C-9B02-FA8BA8796FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA552DD-F588-460C-9B02-FA8BA8796FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67C0A509-F1BA-4EFE-AC03-9B0D623DF9BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67C0A509-F1BA-4EFE-AC03-9B0D623DF9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67C0A509-F1BA-4EFE-AC03-9B0D623DF9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67C0A509-F1BA-4EFE-AC03-9B0D623DF9BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DB2331B-5C6E-45DC-ADA5-B8E64BD2CD8B}
+	EndGlobalSection
+EndGlobal
