@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("add, subtract, divide, multiply");
+            Console.WriteLine("type add, subtract, divide or multiply");
             string userInput = Console.ReadLine();
 
             if (userInput == "add")
