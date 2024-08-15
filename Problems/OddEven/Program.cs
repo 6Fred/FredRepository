@@ -10,9 +10,6 @@
             string userResult = (userMod < 1) ? "the number is even!" : "the number is odd!";
             Console.WriteLine(userResult);
             Console.Read();
-
         }
-
-
     }
 }
