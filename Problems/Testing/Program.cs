@@ -36,7 +36,7 @@
         static void AddMethod()
         {
             LineMethod();
-            Console.WriteLine("your number is " + (numOne + numTwo) + "!");
+            Console.WriteLine("your number is   !" );
             Console.Read();
         }
         static void SubMethod()
