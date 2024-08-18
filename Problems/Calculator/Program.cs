@@ -7,9 +7,12 @@
             Console.WriteLine("type add, subtract, divide or multiply");
             string userInput = Console.ReadLine();
 
+            int numOne = EnterNumber ("first number");
+            int numTwo = EnterNumber ("second number");
+
             if (userInput == "add")
             {
-                AddMethod();
+                AddMethod( numOne, numTwo);
             }
             else if (userInput == "subtract")
             {
@@ -30,7 +33,7 @@
             }
             Console.Read();
         }
-        static void AddMethod()
+        static void AddMethod(int numOne, int numTwo)
         {
             Console.WriteLine("enter a number!");
             int numOne = Convert.ToInt32(Console.ReadLine());
@@ -73,6 +76,11 @@
 
             Console.WriteLine("your number is " + (numOne * numTwo) + "!");
             Console.Read();
+        }
+        static int EnterNumber(string numberSequence)
+        {
+            Console.WriteLine("Enter" + numberSequence);
+            int num = Convert.ToInt32(Console.ReadLine());
         }
     }
 }
