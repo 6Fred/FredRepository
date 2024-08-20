@@ -15,7 +15,7 @@
                     SubMethod();
                     break;
                 case "div":
-                    DivideMethod(); 
+                    DivideMethod();
                     break;
                 case "mult":
                     MultiplyMethod();
@@ -25,16 +25,18 @@
                     break;
             }
         }
-        
-        static void AddMethod()
+        static void LineMethod()
         {
             Console.WriteLine("enter a number!");
             int numOne = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("enter a second number!");
             int numTwo = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("your number is " + (numOne + numTwo) + "!" );
+        }
+        static void AddMethod(int numOne, int numTwo)
+        {
+            LineMethod();
+            Console.WriteLine("your number is " + (numOne + numTwo) + "!");
             Console.Read();
         }
         static void SubMethod()
@@ -70,6 +72,6 @@
             Console.WriteLine("your number is " + (numOne * numTwo) + "!");
             Console.Read();
         }
-        
+
     }
 }
