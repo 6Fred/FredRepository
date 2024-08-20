@@ -16,15 +16,15 @@
             }
             else if (userInput == "subtract")
             {
-                SubMethod();
+                SubMethod(numOne, numTwo);
             }
             else if (userInput == "divide")
             {
-                DivideMethod();
+                DivideMethod(numOne, numTwo);
             }
             else if (userInput == "multiply")
             {
-                MultiplyMethod();
+                MultiplyMethod(numOne, numTwo);
             }
             else 
             {
@@ -38,35 +38,19 @@
             Console.WriteLine("your number is " + (numOne + numTwo) + "!");
             Console.Read();
         }
-        static void SubMethod()
+        static void SubMethod(int numOne, int numTwo)
         {
-            Console.WriteLine("enter a number!");
-            int numOne = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("enter a second number!");
-            int numTwo = Convert.ToInt32(Console.ReadLine());
-
             Console.WriteLine("your number is " + (numOne - numTwo) + "!");
             Console.Read();
         }
-        static void DivideMethod()
+        static void DivideMethod(int numOne, int numTwo)
         {
-            Console.WriteLine("enter a number!");
-            int numOne = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("enter a second number!");
-            int numTwo = Convert.ToInt32(Console.ReadLine());
-
             Console.WriteLine("your number is " + (numOne / numTwo) + "!");
             Console.Read();
         }
-        static void MultiplyMethod()
+        static void MultiplyMethod(int numOne, int numTwo)
         {
-            Console.WriteLine("enter a number!");
-            int numOne = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("enter a second number!");
-            int numTwo = Convert.ToInt32(Console.ReadLine());
+            
 
             Console.WriteLine("your number is " + (numOne * numTwo) + "!");
             Console.Read();
