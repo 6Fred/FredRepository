@@ -6,33 +6,27 @@
         {
             Console.WriteLine("type add, subtract, divide or multiply");
             string userInput = Console.ReadLine();
-
-            int numOne = EnterNumber ("first number");
-            int numTwo = EnterNumber ("second number");
-
-            if (userInput == "add")
+            int numOne = EnterNumber("first number!");
+            int numTwo = EnterNumber("second number!");
+            switch (userInput)
             {
-                AddMethod( numOne, numTwo);
+                case "add":
+                    AddMethod( numOne,  numTwo);
+                    break;
+                case "subtract":
+                    SubMethod( numOne,  numTwo);
+                    break;
+                case "divide":
+                    DivideMethod( numOne,  numTwo);
+                    break;
+                case "multiply":
+                    MultiplyMethod( numOne,  numTwo);
+                    break;
+                default:
+                    Console.WriteLine("choose one of those options!");
+                    break;
+                }
             }
-            else if (userInput == "subtract")
-            {
-                SubMethod(numOne, numTwo);
-            }
-            else if (userInput == "divide")
-            {
-                DivideMethod(numOne, numTwo);
-            }
-            else if (userInput == "multiply")
-            {
-                MultiplyMethod(numOne, numTwo);
-            }
-            else 
-            {
-                Console.WriteLine("choose one of those options!");
-                
-            }
-            Console.Read();
-        }
         static void AddMethod(int numOne, int numTwo)
         {
             Console.WriteLine("your number is " + (numOne + numTwo) + "!");
@@ -50,16 +44,16 @@
         }
         static void MultiplyMethod(int numOne, int numTwo)
         {
-            
-
             Console.WriteLine("your number is " + (numOne * numTwo) + "!");
             Console.Read();
         }
         static int EnterNumber(string numberSequence)
         {
-            Console.WriteLine("Enter " + numberSequence);
+            Console.WriteLine("Enter your " + numberSequence);
             int num = Convert.ToInt32(Console.ReadLine());
             return num;
+     
         }
     }
+
 }
