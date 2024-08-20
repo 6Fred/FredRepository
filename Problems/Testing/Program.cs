@@ -25,18 +25,16 @@
                     break;
             }
         }
-        static void LineMethod()
+        
+        static void AddMethod()
         {
             Console.WriteLine("enter a number!");
             int numOne = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("enter a second number!");
             int numTwo = Convert.ToInt32(Console.ReadLine());
-        }
-        static void AddMethod()
-        {
-            LineMethod();
-            Console.WriteLine("your number is   !" );
+
+            Console.WriteLine("your number is " + (numOne + numTwo) + "!" );
             Console.Read();
         }
         static void SubMethod()
