@@ -6,11 +6,13 @@
         {
             Console.WriteLine("type add, subtract, divide or multiply");
             string userInput = Console.ReadLine();
+            string userResult = (userInput != "add","subtract","divide","multiply") ? ()
             int numOne = EnterNumber("first number!");
             int numTwo = EnterNumber("second number!");
             switch (userInput)
             {
                 case "add":
+                    Console.WriteLine("niec choice");
                     AddMethod( numOne,  numTwo);
                     break;
                 case "subtract":
@@ -23,7 +25,7 @@
                     MultiplyMethod( numOne,  numTwo);
                     break;
                 default:
-                    Console.WriteLine("choose one of those options!");
+                    Console.WriteLine("choose one of those options switch code!");
                     break;
                 }
             }
