@@ -2,20 +2,32 @@
 {
     internal class Car
     {
-        static void TestMethod(string carColor)
-        {
-            Console.WriteLine(carColor + " toyota");
-        }
+
         static void Main(string[] args)
         {
+            Console.WriteLine("give me");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            if (userInput == 1)
+            {
+                TestMethod();
+                Console.Read();
+            }
+            else
+            {
+                TestMethodTwo();
+                Console.Read();
 
-            TestMethod("blue");
-            TestMethod("green");
-            TestMethod("red");
-            Console.Read();
+            }
         }
+        static void TestMethod()
+        {
+            Console.WriteLine("TestMethod");
 
-
+        }
+        static void TestMethodTwo()
+        {
+            Console.WriteLine("TestMethodTwo is diplsayted");
+        }
 
 
 
