@@ -12,7 +12,6 @@
             switch (userInput)
             {
                 case "add":
-                    Console.WriteLine("niec choice");
                     AddMethod( numOne,  numTwo);
                     break;
                 case "subtract":
