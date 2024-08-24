@@ -1,14 +1,27 @@
 ﻿namespace Testing
 {
-    internal class Program
+    internal class Car
     {
-        static void Main(string[] args)
-        { 
-
-        
-        
+        static void TestMethod(string carColor)
+        {
+            Console.WriteLine(carColor + " toyota");
         }
-           
+        static void Main(string[] args)
+        {
+
+            TestMethod("blue");
+            TestMethod("green");
+            TestMethod("red");
+            Console.Read();
+        }
+
+
+
+
+
+
+
 
     }
+
 }
