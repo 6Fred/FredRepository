@@ -6,27 +6,18 @@
         static void Main(string[] args)
         {
             Console.WriteLine("give me");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-            if (userInput == 1)
-            {
-                TestMethod();
-                Console.Read();
-            }
-            else
-            {
-                TestMethodTwo();
-                Console.Read();
-
-            }
+            string userInput = (Console.ReadLine());
+            bool userResult = (userInput == "1") ? TestMethod() : TestMethodTwo();
+            Console.Read();
         }
         static void TestMethod()
         {
-            Console.WriteLine("TestMethod");
+            Console.WriteLine("blue!");
 
         }
         static void TestMethodTwo()
         {
-            Console.WriteLine("TestMethodTwo is diplsayted");
+            Console.WriteLine("red!");
         }
 
 
