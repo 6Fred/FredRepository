@@ -2,28 +2,13 @@
 {
     internal class Car
     {
-
-        static void Main(string[] args)
+        string color = "blue";
+            static void Main (string[] args)
         {
-            Console.WriteLine("give me");
-            string userInput = (Console.ReadLine());
-            bool userResult = (userInput == "1") ? TestMethod() : TestMethodTwo();
+            Car myObj = new Car ();
+            Console.WriteLine(myObj.color);
             Console.Read();
         }
-        static void TestMethod()
-        {
-            Console.WriteLine("blue!");
-
-        }
-        static void TestMethodTwo()
-        {
-            Console.WriteLine("red!");
-        }
-
-
-
-
-
 
     }
 
