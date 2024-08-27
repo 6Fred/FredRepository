@@ -1,12 +1,67 @@
-﻿using System;
-
-public class MyClass
+﻿namespace Calculator
 {
-	public string carColor = "cyan";
-    public int maxSpeed = 250;
-	public void fullThrottle()
-	{
-		global::System.Console.WriteLine("the car is going as fast as it can!");
-	}
-	
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] validCommands = { "add", "subtract", "divide", "multiply" };
+
+            string userInput = ;
+
+            while (true)
+            {
+                Console.WriteLine("please enter add,subtract, divide, multiply!");
+                userInput = Console.ReadLine();
+            }
+
+                int numOne = EnterNumber("first number!");
+            int numTwo = EnterNumber("second number!");
+            switch (userInput)
+            {
+                case "add":
+                    AddMethod(numOne, numTwo);
+                    break;
+                case "subtract":
+                    SubMethod(numOne, numTwo);
+                    break;
+                case "divide":
+                    DivideMethod(numOne, numTwo);
+                    break;
+                case "multiply":
+                    MultiplyMethod(numOne, numTwo);
+                    break;
+                default:
+                    Console.WriteLine("choose one of those options!");
+                    break;
+            }
+        }
+        static void AddMethod(int numOne, int numTwo)
+        {
+            Console.WriteLine("your number is " + (numOne + numTwo) + "!");
+            Console.Read();
+        }
+        static void SubMethod(int numOne, int numTwo)
+        {
+            Console.WriteLine("your number is " + (numOne - numTwo) + "!");
+            Console.Read();
+        }
+        static void DivideMethod(int numOne, int numTwo)
+        {
+            Console.WriteLine("your number is " + (numOne / numTwo) + "!");
+            Console.Read();
+        }
+        static void MultiplyMethod(int numOne, int numTwo)
+        {
+            Console.WriteLine("your number is " + (numOne * numTwo) + "!");
+            Console.Read();
+        }
+        static int EnterNumber(string numberSequence)
+        {
+            Console.WriteLine("Enter your " + numberSequence);
+            int num = Convert.ToInt32(Console.ReadLine());
+            return num;
+
+        }
+    }
+
 }
