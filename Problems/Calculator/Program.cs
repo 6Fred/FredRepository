@@ -4,29 +4,46 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("type add, subtract, divide or multiply");
-            string userInput = Console.ReadLine()?.Trim().ToLower();
+            string[] validCommands = { "add", "subtract", "divide", "multiply" };
+            string userInput = "";
+
+            while (true)
+            {
+                Console.WriteLine("please enter add, subtract, divide or multiply!");
+                userInput = Console.ReadLine()?.Trim().ToLower();
+
+                if (Array.Exists(validCommands, x => x == userInput))
+                {
+                    break;
+                }
+                else
+                {
+                    global::System.Console.WriteLine("type on of those options silly! ");
+                }
+            }
+
             int numOne = EnterNumber("first number!");
             int numTwo = EnterNumber("second number!");
+
             switch (userInput)
             {
                 case "add":
-                    AddMethod( numOne,  numTwo);
+                    AddMethod(numOne, numTwo);
                     break;
                 case "subtract":
-                    SubMethod( numOne,  numTwo);
+                    SubMethod(numOne, numTwo);
                     break;
                 case "divide":
-                    DivideMethod( numOne,  numTwo);
+                    DivideMethod(numOne, numTwo);
                     break;
                 case "multiply":
-                    MultiplyMethod( numOne,  numTwo);
+                    MultiplyMethod(numOne, numTwo);
                     break;
                 default:
                     Console.WriteLine("choose one of those options!");
                     break;
-                }
             }
+        }
         static void AddMethod(int numOne, int numTwo)
         {
             Console.WriteLine("your number is " + (numOne + numTwo) + "!");
@@ -52,7 +69,6 @@
             Console.WriteLine("Enter your " + numberSequence);
             int num = Convert.ToInt32(Console.ReadLine());
             return num;
-     
         }
     }
 
