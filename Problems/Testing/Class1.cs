@@ -5,17 +5,26 @@
         static void Main(string[] args)
         {
             string[] validCommands = { "add", "subtract", "divide", "multiply" };
-
-            string userInput = ;
+            string userInput = "";
 
             while (true)
             {
-                Console.WriteLine("please enter add,subtract, divide, multiply!");
-                userInput = Console.ReadLine();
+                Console.WriteLine("please enter add, subtract, divide or multiply!");
+                userInput = Console.ReadLine()?.Trim().ToLower();
+
+                if (Array.Exists(validCommands, x => x == userInput))
+                {
+                    break;
+                }
+                else
+                {
+                    global::System.Console.WriteLine("type on of those options silly! ");
+                }
             }
 
-                int numOne = EnterNumber("first number!");
+            int numOne = EnterNumber("first number!");
             int numTwo = EnterNumber("second number!");
+
             switch (userInput)
             {
                 case "add":
