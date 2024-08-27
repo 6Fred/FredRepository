@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("type add, subtract, divide or multiply");
-            string userInput = Console.ReadLine();
+            string userInput = Console.ReadLine()?.Trim().ToLower();
             int numOne = EnterNumber("first number!");
             int numTwo = EnterNumber("second number!");
             switch (userInput)
