@@ -6,14 +6,32 @@
         {
             string[] validCommands = { "add", "subtract", "divide", "multiply" };
             string userInput = "";
-            userInput = Console.ReadLine()?.Trim().ToLower();
+            
             TestMethod(userInput, validCommands);
-            SwitchMethod(userInput);
 
-            int numOne = EnterNumber("first number!");
+
+            sint numOne = EnterNumber("first number!");
             int numTwo = EnterNumber("second number!");
 
-            
+
+            switch (userInput)
+            {
+                case "add":
+                    AddMethod(numOne, numTwo);
+                    break;
+                case "subtract":
+                    SubMethod(numOne, numTwo);
+                    break;
+                case "divide":
+                    DivideMethod(numOne, numTwo);
+                    break;
+                case "multiply":
+                    MultiplyMethod(numOne, numTwo);
+                    break;
+                default:
+                    Console.WriteLine("choose one of those options!");
+                    break;
+            }
 
         }
         static void AddMethod(int numOne, int numTwo)
@@ -59,27 +77,7 @@
                 }
             }
         }
-        static void SwitchMethod(int numOne, int numTwo)
-        {
-            switch (userInput)
-            {
-                case "add":
-                    AddMethod(numOne, numTwo);
-                    break;
-                case "subtract":
-                    SubMethod(numOne, numTwo);
-                    break;
-                case "divide":
-                    DivideMethod(numOne, numTwo);
-                    break;
-                case "multiply":
-                    MultiplyMethod(numOne, numTwo);
-                    break;
-                default:
-                    Console.WriteLine("choose one of those options!");
-                    break;
-            }
-        }
+        
 
 
 
