@@ -6,43 +6,15 @@
         {
             string[] validCommands = { "add", "subtract", "divide", "multiply" };
             string userInput = "";
-
-            while (true)
-            {
-                Console.WriteLine("please enter add, subtract, divide or multiply!");
-                userInput = Console.ReadLine()?.Trim().ToLower();
-
-                if (Array.Exists(validCommands, x => x == userInput))
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("type on of those options silly! ");
-                }
-            }
+            userInput = Console.ReadLine()?.Trim().ToLower();
+            TestMethod(userInput, validCommands);
+            SwitchMethod(userInput);
 
             int numOne = EnterNumber("first number!");
             int numTwo = EnterNumber("second number!");
 
-            switch (userInput)
-            {
-                case "add":
-                    AddMethod(numOne, numTwo);
-                    break;
-                case "subtract":
-                    SubMethod(numOne, numTwo);
-                    break;
-                case "divide":
-                    DivideMethod(numOne, numTwo);
-                    break;
-                case "multiply":
-                    MultiplyMethod(numOne, numTwo);
-                    break;
-                default:
-                    Console.WriteLine("choose one of those options!");
-                    break;
-            }
+            
+
         }
         static void AddMethod(int numOne, int numTwo)
         {
@@ -70,6 +42,46 @@
             int num = Convert.ToInt32(Console.ReadLine());
             return num;
         }
-    }
+        static void TestMethod(string userInput, string[] validCommands)
+        {
+            while (true)
+            {
+                Console.WriteLine("please enter add, subtract, divide or multiply!");
+                userInput = Console.ReadLine()?.Trim().ToLower();
 
+                if (Array.Exists(validCommands, x => x == userInput))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("type on of those options silly! ");
+                }
+            }
+        }
+        static void SwitchMethod(int numOne, int numTwo)
+        {
+            switch (userInput)
+            {
+                case "add":
+                    AddMethod(numOne, numTwo);
+                    break;
+                case "subtract":
+                    SubMethod(numOne, numTwo);
+                    break;
+                case "divide":
+                    DivideMethod(numOne, numTwo);
+                    break;
+                case "multiply":
+                    MultiplyMethod(numOne, numTwo);
+                    break;
+                default:
+                    Console.WriteLine("choose one of those options!");
+                    break;
+            }
+        }
+
+
+
+    }
 }
