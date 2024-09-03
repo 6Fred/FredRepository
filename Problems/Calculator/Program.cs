@@ -18,7 +18,7 @@
                 }
                 else
                 {
-                    global::System.Console.WriteLine("type on of those options silly! ");
+                    Console.WriteLine("type on of those options silly! ");
                 }
             }
 
