@@ -1,9 +1,11 @@
 ﻿namespace Calculator
 {
-    internal class Program
+     class Program
     {
         static void Main(string[] args)
         {
+            CalcMethod myObj = new CalcMethod();
+            Console.WriteLine(CalcMethod.displayTest);
             string[] validCommands = { "add", "subtract", "divide", "multiply" };
             string userInput = "";
 
@@ -18,7 +20,7 @@
                 }
                 else
                 {
-                    global::System.Console.WriteLine("type on of those options silly! ");
+                    Console.WriteLine("type on of those options silly! ");
                 }
             }
 
