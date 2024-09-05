@@ -14,7 +14,7 @@
         }
         public static void DivideMethod(int numOne, int numTwo)
         {
-            Console.WriteLine("your number isdd " + (numOne / numTwo) + "!");
+            Console.WriteLine("your number is " + (numOne / numTwo) + "!");
             Console.Read();
         }
         public static void MultiplyMethod(int numOne, int numTwo)
