@@ -1,18 +1,14 @@
-﻿
-
-namespace Calculator
+﻿namespace Calculator
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             string[] validCommands = { "add", "subtract", "divide", "multiply" };
-            string userInput = TestMethod(validCommands);
+            string userInput = Methods.TestMethod(validCommands);
             
-
-            int numOne = EnterNumber("first number!");
-            int numTwo = EnterNumber("second number!");
-
+            int numOne = Methods.EnterNumber("first number!");
+            int numTwo = Methods.EnterNumber("second number!");
 
             switch (userInput)
             {
@@ -20,13 +16,13 @@ namespace Calculator
                     Methods.AddMethod(numOne, numTwo);
                     break;
                 case "subtract":
-                    SubMethod(numOne, numTwo);
+                    Methods.SubMethod(numOne, numTwo);
                     break;
                 case "divide":
-                    DivideMethod(numOne, numTwo);
+                    Methods.DivideMethod(numOne, numTwo);
                     break;
                 case "multiply":
-                    MultiplyMethod(numOne, numTwo);
+                    Methods.MultiplyMethod(numOne, numTwo);
                     break;
                 default:
                     Console.WriteLine("choose one of those options!");
