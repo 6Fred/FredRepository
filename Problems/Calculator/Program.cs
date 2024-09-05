@@ -13,7 +13,7 @@
 
                 if (userInput == "exit")
                 {
-                    keepRunning = false;
+                    Environment.Exit(0);
                     continue;
                 }
                 int numOne = Methods.EnterNumber("first number!");

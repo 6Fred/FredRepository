@@ -39,7 +39,10 @@
                 if (Array.Exists(validCommands, x => x == userInput))
                 {
                     return userInput;
-
+                }
+                else if (userInput == "exit")
+                {
+                    Environment.Exit(0);
                 }
                 else
                 {
