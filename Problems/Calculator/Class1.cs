@@ -19,7 +19,7 @@
         }
         public static void MultiplyMethod(int numOne, int numTwo)
         {
-            Console.WriteLine("your number is " + (numOne * numTwo) + "!");
+            Console.WriteLine("your number is test " + (numOne * numTwo) + "!");
             Console.WriteLine("type exit to close program!");
             Console.Read();
         }
