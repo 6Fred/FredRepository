@@ -4,33 +4,25 @@
     {
         static void Main(string[] args)
         {
+            int totalSum = 0;
             string[] validWords = { "yes", "no" };
             bool keepRunning = true;
 
             while (keepRunning)
             {
-                string uInput = GreetingMethod(validWords)
+                string uInput = GreetingMethod(validWords, totalSum);
 
                 if (uInput == "exit")
                 {
-                    keepRunning = false;
+                    Environment.Exit(0);
                     continue;
                 }
-            
-            
-            
             } 
-
-            int totalSum = 0;
-
-
-
-
-
-            SumMethod(userInput, totalSum);
             
             Console.Read();
         }
+
+
             static void SumMethod(int userInput, int totalSum)
         {
             while (userInput != 0)
@@ -40,7 +32,7 @@
             }
             Console.WriteLine("the sum is " + totalSum);
         }
-            static string GreetingMethod()
+            static string GreetingMethod(string[] validWords, int totalSum)
         {
             while (true)
             {
@@ -49,11 +41,9 @@
                 Console.WriteLine("Wow! " + userInput + " is my favorite number! Are you sure you want to use this number?");
                 string uInput = Console.ReadLine()?.Trim().ToLower();
 
-                if (Array.Exists(validWords, x => x ==uInput))
+                if (Array.Exists(validWords, x => x == uInput))
                 {
-
-                    SumMethod(userInput, totalSum)
-
+                    SumMethod(userInput, totalSum);
                 }
                 else
                 {
