@@ -1,4 +1,6 @@
-﻿namespace SumDigits
+﻿using System.Threading.Channels;
+
+namespace SumDigits
 {
     internal class Program
     {
@@ -19,7 +21,7 @@
                 }
             } 
             
-            Console.Read();
+            
         }
 
 
@@ -31,6 +33,7 @@
                 userInput /= 10;
             }
             Console.WriteLine("the sum is " + totalSum);
+            Console.Read();
         }
             static string GreetingMethod(string[] validWords, int totalSum)
         {
@@ -40,6 +43,16 @@
                 int userInput = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Wow! " + userInput + " is my favorite number! Are you sure you want to use this number?");
                 string uInput = Console.ReadLine()?.Trim().ToLower();
+                
+                if (uInput == "no")
+                {
+                    Console.WriteLine("lame. goodbye");
+                    Thread.Sleep(5000);
+                    Environment.Exit(0);
+                }
+
+
+                //Console.WriteLine(uResult);
 
                 if (Array.Exists(validWords, x => x == uInput))
                 {
@@ -49,7 +62,7 @@
                 {
                     Console.WriteLine("SAY YES OR NO!!!");
                 }
-            }
+            }   
         }
 
 
