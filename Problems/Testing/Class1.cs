@@ -4,15 +4,15 @@
     {
         static void Main(string[] args)
         {
-            //int numberOne = 0;
-            //int numberTwo = 0;
+            int numberOne = 0;
+            int numberTwo = 0;
 
             Console.WriteLine("give me a number!");
-            //numberOne = Convert.ToInt32()Console.ReadLine();
-            //Console.WriteLine("give me another number!");
-            //numberTwo = Convert.ToInt32()Console.ReadLine();
+            numberOne = Convert.ToInt32(); Console.ReadLine();
+            Console.WriteLine("give me another number!");
+            numberTwo = Convert.ToInt32(); Console.ReadLine();
 
-            //Console.WriteLine(" is your answer!");
+            Console.WriteLine(" is your answer!");
             Console.Read();
 
 
