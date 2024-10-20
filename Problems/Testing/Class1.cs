@@ -1,87 +1,26 @@
-﻿namespace Test
+﻿namespace OddEven
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string[] validCommands = { "add", "subtract", "divide", "multiply" };
-            string userInput = "";
-            userInput = Console.ReadLine()?.Trim().ToLower();
-            TestMethod(userInput, validCommands);
-            SwitchMethod(userInput);
+            int numberOne = 0;
+            int numberTwo = 0;
 
-            int numOne = EnterNumber("first number!");
-            int numTwo = EnterNumber("second number!");
+            Console.WriteLine("give me a number!");
+            numberOne = Convert.ToInt32()Console.ReadLine();
+            Console.WriteLine("give me another number!");
+            numberTwo = Convert.ToInt32()Console.ReadLine();
 
-
-
-        }
-        static void AddMethod(int numOne, int numTwo)
-        {
-            Console.WriteLine("your number is " + (numOne + numTwo) + "!");
+            Console.WriteLine(" is your answer!");
             Console.Read();
-        }
-        static void SubMethod(int numOne, int numTwo)
-        {
-            Console.WriteLine("your number is " + (numOne - numTwo) + "!");
-            Console.Read();
-        }
-        static void DivideMethod(int numOne, int numTwo)
-        {
-            Console.WriteLine("your number is " + (numOne / numTwo) + "!");
-            Console.Read();
-        }
-        static void MultiplyMethod(int numOne, int numTwo)
-        {
-            Console.WriteLine("your number is " + (numOne * numTwo) + "!");
-            Console.Read();
-        }
-        static int EnterNumber(string numberSequence)
-        {
-            Console.WriteLine("Enter your " + numberSequence);
-            int num = Convert.ToInt32(Console.ReadLine());
-            return num;
-        }
-        static void TestMethod(string userInput, string[] validCommands)
-        {
-            while (true)
-            {
-                Console.WriteLine("please enter add, subtract, divide or multiply!");
-                userInput = Console.ReadLine()?.Trim().ToLower();
-
-                if (Array.Exists(validCommands, x => x == userInput))
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("type on of those options silly! ");
-                }
-            }
-        }
-        static void SwitchMethod(int numOne, int numTwo)
-        {
-            switch (userInput)
-            {
-                case "add":
-                    AddMethod(numOne, numTwo);
-                    break;
-                case "subtract":
-                    SubMethod(numOne, numTwo);
-                    break;
-                case "divide":
-                    DivideMethod(numOne, numTwo);
-                    break;
-                case "multiply":
-                    MultiplyMethod(numOne, numTwo);
-                    break;
-                default:
-                    Console.WriteLine("choose one of those options!");
-                    break;
-            }
-        }
 
 
-
+            ///int userInput = Convert.ToInt32(Console.ReadLine());
+            //int userMod = userInput % 2;
+            //string userResult = (userMod < 1) ? "the number is even!" : "the number is odd!";
+            //Console.WriteLine(userResult);
+            //Console.Read();
+        }
     }
 }
