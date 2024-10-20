@@ -4,8 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("type a number to see if its prime!");
-            int uInput = Convert.ToInt32(Console.ReadLine());
+            int numberOne = 0;
+            int numberTwo = 0;
+
+            Console.WriteLine("lets check a sum of two numbers to see if its prime!");
+            Thread.Sleep(1300);
+            Console.WriteLine("give me a number now!");
+            numberOne = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("give me another number now!");
+            numberTwo = Convert.ToInt32(Console.ReadLine());
+            int uInput = numberOne + numberTwo;
+
+            
             if (uInput == 0 || uInput == 1)
             {
                 Console.WriteLine(uInput + " is not a prime number!");
@@ -23,7 +33,8 @@
                     }
                 }
                 Console.WriteLine(uInput + " is a prime number!");
-                Console.ReadLine();
+                Thread.Sleep(2500);
+                Environment.Exit(0);
             }
         }
     }
