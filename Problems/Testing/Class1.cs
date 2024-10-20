@@ -7,9 +7,9 @@
             int numberOne = 0;
             int numberTwo = 0;
 
-            Console.WriteLine("give me a number!");
+            Console.WriteLine("give me a number now!");
             numberOne = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("give me another number!");
+            Console.WriteLine("give me another number now!");
             numberTwo = Convert.ToInt32(Console.ReadLine());
             int sum = numberOne + numberTwo;
 
