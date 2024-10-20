@@ -8,7 +8,7 @@
             int numberTwo = 0;
 
             Console.WriteLine("give me a number!");
-            numberOne = Convert.ToInt32(); Console.ReadLine();
+            numberOne = Convert.ToInt32()(Console.ReadLine();
             Console.WriteLine("give me another number!");
             numberTwo = Convert.ToInt32(); Console.ReadLine();
 
